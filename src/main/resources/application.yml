@@ -1,0 +1,29 @@
+server:
+  port: 9090
+  servlet:
+    context-parameters:
+      primefaces.THEME: olympia-#{guestPreferences.theme}
+      primefaces.FONT_AWESOME: true
+      javax.faces.FACELETS_SKIP_COMMENTS: true
+
+support:
+  email: localhost@hotmail.com
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    show-sql: true
+
+  mail:
+    host: localhost
+    port: 2525
+    protocol: smtp
+    username: test
+    password: test
+
+logging:
+  level:
+    org.springframework: INFO
+    org.springframework.security: INFO

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+              version="2.3">
+
+    <name>PDKS</name>
+
+
+    <application>
+        <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+    </application>
+
+    <converter>
+        <converter-id>personelKartConverter</converter-id>
+        <converter-class>com.sahabt.internal.converter.PersonelKartConverter</converter-class>
+    </converter>
+    <converter>
+        <converter-id>userConverter</converter-id>
+        <converter-class>com.sahabt.internal.converter.UserConverter</converter-class>
+    </converter>
+
+    <converter>
+        <converter-id>org.ocpsoft.PrettyTimeConverter</converter-id>
+        <converter-class>org.ocpsoft.prettytime.jsf.PrettyTimeConverter</converter-class>
+    </converter>
+</faces-config>
