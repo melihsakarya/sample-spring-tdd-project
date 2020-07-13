@@ -12,7 +12,9 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TestApplication.class)
@@ -22,6 +24,8 @@ public class ProductIntegrationTest {
     @Autowired(required = true)
     ProductService productService;
 
+    @PersistenceContext
+    EntityManager entityManager;
 
     @Test
     public void saveProductTest(){
@@ -29,6 +33,10 @@ public class ProductIntegrationTest {
         product.setName("Iphone");
         productService.save(product);
         Assert.assertTrue(product.getId() > 0);
+        productService.getById(1L);
+        productService.getById(1L);
+        productService.getById(1L);
+
 
     }
 
