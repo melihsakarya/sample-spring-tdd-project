@@ -37,8 +37,19 @@ pipeline {
     }
 
     stage('Code Review') {
-      steps {
-        sleep 5
+      parallel {
+        stage('Code Review') {
+          steps {
+            sleep 5
+          }
+        }
+
+        stage('AI Code Review') {
+          steps {
+            sleep 5
+          }
+        }
+
       }
     }
 
