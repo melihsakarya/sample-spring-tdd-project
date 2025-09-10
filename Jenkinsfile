@@ -21,7 +21,7 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
             sleep 5
           }
