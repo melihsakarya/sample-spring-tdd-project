@@ -2,8 +2,31 @@ pipeline {
   agent any
   stages {
     stage('Analysis') {
-      steps {
-        sleep 5
+      parallel {
+        stage('Analysis') {
+          steps {
+            sleep 5
+          }
+        }
+
+        stage('Generate User Stories') {
+          steps {
+            sleep 5
+          }
+        }
+
+        stage('Generate Acceptance Criterias') {
+          steps {
+            sleep 5
+          }
+        }
+
+        stage('') {
+          steps {
+            sleep 5
+          }
+        }
+
       }
     }
 
