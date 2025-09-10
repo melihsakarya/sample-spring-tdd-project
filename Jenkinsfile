@@ -27,7 +27,13 @@ pipeline {
           }
         }
 
-        stage('error') {
+        stage('AI - Functional Test') {
+          steps {
+            sleep 5
+          }
+        }
+
+        stage('AI - Regression Tests') {
           steps {
             sleep 5
           }
